@@ -7,8 +7,8 @@ const pptrCoreJson = require('puppeteer-core/package.json')
 const { writeFile } = require('../src/utils')
 
 const newLineRegex = /\r?\n/
-const chromeTempPath = path.join(process.cwd(), 'temp', 'chrome')
-const chromeConfigPath = path.join(process.cwd(), 'chrome.json')
+const chromeTempPath = path.join(__dirname, 'temp', 'chrome')
+const chromeConfigPath = path.join(__dirname, '..', 'chrome.json')
 
 function canAccess(file) {
   if (!file) {
