@@ -9,7 +9,7 @@ exec(`"${q.executablePath}" --version`, async function(error, stdout, stderr) {
   console.log(stdout);
   console.log('--------');
   const browser = await pptr.launch(q);
-  console.log(browser.version());
+  console.log(await browser.version());
   await browser.close();
 });
 
